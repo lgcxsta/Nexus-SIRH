@@ -78,6 +78,23 @@ CREATE TABLE `tickets` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `timesheet`
+--
+
+CREATE TABLE `timesheet` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `time_in_morning` time DEFAULT NULL,
+  `time_out_morning` time DEFAULT NULL,
+  `time_in_afternoon` time DEFAULT NULL,
+  `time_out_afternoon` time DEFAULT NULL,
+  `notes` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `user`
 --
 
@@ -139,6 +156,13 @@ ALTER TABLE `tickets`
   ADD KEY `ticket_assigned` (`assigned_id`);
 
 --
+-- Index pour la table `timesheet`
+--
+ALTER TABLE `timesheet`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `timesheet_user` (`user_id`);
+
+--
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
@@ -183,6 +207,12 @@ ALTER TABLE `tickets`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT pour la table `timesheet`
+--
+ALTER TABLE `timesheet`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
@@ -210,6 +240,12 @@ ALTER TABLE `supp`
 ALTER TABLE `tickets`
   ADD CONSTRAINT `ticket_assigned` FOREIGN KEY (`assigned_id`) REFERENCES `user` (`user_id`),
   ADD CONSTRAINT `ticket_creator` FOREIGN KEY (`creator_id`) REFERENCES `user` (`user_id`);
+
+--
+-- Contraintes pour la table `timesheet`
+--
+ALTER TABLE `timesheet`
+  ADD CONSTRAINT `timesheet_user_ibfk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 
 --
 -- Contraintes pour la table `user`
