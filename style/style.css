@@ -18,7 +18,7 @@
 ========================================================================== */
 
 /* https://codepen.io/nefejames/pen/ogvNgJq  - Card hover effect */
-    .loginCard {
+    .loginCard, .formCard {
         background: white;
         padding: 2.5rem;
         border-radius: 16px;
@@ -29,7 +29,7 @@
         position: relative;
         overflow: hidden; 
     }
-    .dark_mode .loginCard {
+    .dark_mode .loginCard, .dark_mode .formCard {
         background: #1a1a1a;
         border: 1px solid #444444;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
@@ -66,11 +66,11 @@
     .dark_mode .loginCard:hover {
         box-shadow: 0 0 20px #444444;
     }
-    .loginCard:hover::before {
+    .loginCard:hover::before, .formCard:hover::before {
         opacity: 1;
         transform: rotate(-45deg) translateY(100%);
     }
-    .loginCard h1 {
+    .loginCard h1, .formCard h1 {
         margin: 0 0 2rem 0;
         font-size: 1.5rem;
         text-align: center;
@@ -79,13 +79,13 @@
         font-family: "Arial Black";
         color: #2d4168;
     }
-    .dark_mode .loginCard h1 {
+    .dark_mode .loginCard h1, .dark_mode .formCard h1{
         color: #ffffff;
     }
     .formGroup {
         margin-bottom: 1.5rem;
     }
-    .loginCard label {
+    .loginCard label, .formCard label {
         display: block;
         margin-bottom: 0.6rem;
         color: #475569;
@@ -93,7 +93,7 @@
         font-weight: 500;
         font-family: "Work Sans", sans-serif;
     }
-    .dark_mode .loginCard label {
+    .dark_mode .loginCard label, .dark_mode .formCard label {
         color: #B0B0B0;
     }
     .inputForm {
@@ -160,6 +160,7 @@
         left: 50px;
         z-index: 5;
     }
+
     .switch {
         position: absolute;
         display: inline-block;
@@ -240,3 +241,14 @@
     .dark_mode .darkThemeSymbol {
         filter: invert(100%);
     }
+
+
+/* ==========================================================================
+    TICKETS
+========================================================================== */
+
+textarea {
+    resize: none;
+    font-family: "Work Sans", sans-serif;
+    scrollbar-color: transparent;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../script/script.js"></script>
+    <title>Ticket</title>
+</head>
+
+<body>
+    <div class="themeBtnDiv" id="btnToggleTheme">
+        <label class="switch">
+            <input type="checkbox" id="themeToggle" onchange="toggleTheme()" />
+            <span class="btnTheme"></span>
+            <img class="lightThemeSymbol" src="../img/sun.png">
+            <img class="darkThemeSymbol" src="../img/moon.png">
+        </label>
+    </div>
+    <div class="formCard">
+        <h1>Formulaire</h1>
+
+        <form>
+            <div class="formGroup">
+                <label for="formDepartment">Department</label>
+                <select id="department" name="department" class="inputForm" required>
+                    <option value="" selected disabled>---</option>
+                    <option value="adminForm">Paie/Admin</option>
+                    <option value="itForm">Logiciel/IT</option>
+                </select>
+            </div>
+            <div class="formGroup">
+                <label for="formTitle">Title</label>
+                <input type="text" class="inputForm" id="titleForm" placeholder="Sujet..." maxlength="100" required>
+            </div>
+
+            <div class="formGroup">
+                <label for="formDescription">Description</label>
+                <textarea class="inputForm" id="formDescription" placeholder="Description de votre demande..."
+                    maxlength="1500" rows="7"></textarea>
+            </div>
+
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
+</body>
+
+</html>
