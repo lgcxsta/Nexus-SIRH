@@ -8,19 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/dashboard.css">
     <script src="../script/script.js"></script>
+    <link rel="stylesheet" href="../style/forms.css">
     <title>Ticket</title>
 </head>
 
 <body>
-    <div class="themeBtnDiv" id="btnToggleTheme">
-        <label class="switch">
-            <input type="checkbox" id="themeToggle" onchange="toggleTheme()" />
-            <span class="btnTheme"></span>
-            <img class="lightThemeSymbol" src="../img/sun.png">
-            <img class="darkThemeSymbol" src="../img/moon.png">
-        </label>
-    </div>
+    
+    <?php include 'nav.php'; ?>
+    <main style="margin-left: 250px; padding: 20px;">
     <div class="formCard">
         <h1>Formulaire</h1>
 
@@ -46,7 +43,6 @@
 
             <input type="submit" value="Envoyer">
         </form>
-    </div>
+    </div> </main> 
 </body>
-
 </html>
