@@ -1,254 +1,85 @@
 /* ==========================================================================
-    BODY
+    VARIABLES GLOBALES (couleurs)
 ========================================================================== */
-    body {
-        background: radial-gradient(circle, #f0f4f8 0%, #cce0f5 100%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
-    body.dark_mode {
-        background: radial-gradient(circle, #1a1a1a 0%, #020202 100%);
-    }
-
-/* ==========================================================================
-    LOGIN.HTML PAGE
-========================================================================== */
-
-/* https://codepen.io/nefejames/pen/ogvNgJq  - Card hover effect */
-    .loginCard, .formCard {
-        background: white;
-        padding: 2.5rem;
-        border-radius: 16px;
-        border: 1px solid #ccdbf0;
-        width: 100%;
-        max-width: 360px;
-        box-shadow: 0 15px 35px rgba(51, 65, 85, 0.1);
-        position: relative;
-        overflow: hidden; 
-    }
-    .dark_mode .loginCard, .dark_mode .formCard {
-        background: #1a1a1a;
-        border: 1px solid #444444;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
-    }
+:root {
+    /* Boutons, Logos, Dégradés*/
+    --brand-primary: #3c496e;
+    --brand-secondary: #7d90c4;
     
-    .loginCard::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(
-            0deg,
-            transparent,
-            transparent 30%,
-            rgba(81, 128, 228, 0.3)
-        );
-        transform: rotate(-45deg);
-        opacity: 0;
-        transition: all 0.5s ease;
-    }
-    .dark_mode .loginCard::before {
-        background: linear-gradient(
-            0deg,
-            transparent,
-            transparent 30%,
-            rgba(167, 167, 167, 0.3)
-        );
-    }
-    .loginCard:hover {
-        box-shadow: 0 0 20px #a9d0f5;
-    }
-    .dark_mode .loginCard:hover {
-        box-shadow: 0 0 20px #444444;
-    }
-    .loginCard:hover::before, .formCard:hover::before {
-        opacity: 1;
-        transform: rotate(-45deg) translateY(100%);
-    }
-    .loginCard h1, .formCard h1 {
-        margin: 0 0 2rem 0;
-        font-size: 1.5rem;
-        text-align: center;
-        font-weight: 500;
-        letter-spacing: -0.5px;
-        font-family: "Arial Black";
-        color: #2d4168;
-    }
-    .dark_mode .loginCard h1, .dark_mode .formCard h1{
-        color: #ffffff;
-    }
-    .formGroup {
-        margin-bottom: 1.5rem;
-    }
-    .loginCard label, .formCard label {
-        display: block;
-        margin-bottom: 0.6rem;
-        color: #475569;
-        font-size: 0.85rem;
-        font-weight: 500;
-        font-family: "Work Sans", sans-serif;
-    }
-    .dark_mode .loginCard label, .dark_mode .formCard label {
-        color: #B0B0B0;
-    }
-    .inputForm {
-        width: 100%;
-        padding: 12px 14px;
-        background-color: #cde6ff1a;
-        border: 1px solid #e4e2ff;
-        border-radius: 8px;
-        color: #334155;
-        font-size: 1rem;
-        box-sizing: border-box;
-        transition: all 0.3s ease;
-    }
-    .dark_mode .inputForm {
-        background-color: #121212;
-        border: 1px solid #444444;
-        color: #E0E0E0;
-    }
-    .inputForm:focus {
-        outline: none;
-        border-color: #3b83f634;
-        box-shadow: 0 0 0 3px rgba(59, 131, 246, 0.11);
-    }
-    .dark_mode .inputForm:focus {
-        border-color: #888888;
-        box-shadow: 0 0 0 1px rgba(136, 136, 136, 0.2);
-    }
-    input[type="submit"] {
-        width: 100%;
-        padding: 12px;
-        margin-top: 1rem;
-        background-color: #d0dde950;
-        color: #3d5486;
-        border: none;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: transform 0.2s, background-color 0.3s;
-        font-family: "Work Sans", sans-serif;
-    }
-    .dark_mode input[type="submit"] {
-        background-color: #c0c0c0;
-        color: #121212;
-    }
-    input[type="submit"]:hover {
-        background-color: #d0dbe9ab;
-        transform: translateY(-2px);
-    }
-    .dark_mode  input[type="submit"]:hover {
-        background-color: #ffffff;
-    }
-    input[type="submit"]:active {
-        transform: translateY(0);
-    }
+    /*ARRIÈRE-PLANS (bkg cartes, menus) */
+    --bg-body-start: #f0f4f8;
+    --bg-body-end: #cce0f5;
+    --bg-surface: #ffffff; /* bkg cartes/formulaires */
+    --bg-sidebar: #f0f7ff; 
+    --bg-input: rgba(205, 230, 255, 0.15);
+    --bg-input-focus: #ffffff;
+    
+    /* Survols, liens actifs */
+    --hover-subtle: rgba(186, 201, 216, 0.15); 
+    --active-subtle: rgba(125, 144, 196, 0.15);
+    --card-hover-glow: rgba(81, 128, 228, 0.15);
+    
+    /* Textes */
+    --text-primary: #1e293b; /* Titres, textes principaux */
+    --text-secondary: #64748b; /* Labels des formulaires */
+    --text-muted: #818181; /* Petit textes */
+    --text-btn: #ffffff; /* Texte sur les boutons */
+    
+    /* BORDURES ET OMBRES */
+    --border-subtle: rgba(204, 219, 240, 0.6);
+    --border-divider: rgba(186, 201, 216, 0.3); /* Ligne de séparation sidebar */
+    --border-focus: rgba(59, 131, 246, 0.4);
+    --shadow-card-1: rgba(51, 65, 85, 0.08);
+    --shadow-card-2: rgba(0, 0, 0, 0.03);
+    --shadow-glow: rgba(169, 208, 245, 0.4);
+    --shadow-btn: rgba(60, 73, 110, 0.2);
+    --shadow-btn-hover: rgba(60, 73, 110, 0.4);
+}
+
+/* DARK THEME */
+body.dark_mode {
+    --brand-primary: #9ba5be;
+    --brand-secondary: #f1f1f1;
+    
+    --bg-body-start: #1a1a1a;
+    --bg-body-end: #020202;
+    --bg-surface: #1a1a1a;
+    --bg-sidebar: #1d1f20;
+    --bg-input: rgba(255, 255, 255, 0.05);
+    --bg-input-focus: #1a1a1a;
+    
+    --hover-subtle: rgba(255, 255, 255, 0.05);
+    --active-subtle: rgba(155, 165, 190, 0.2);
+    --card-hover-glow: rgba(167, 167, 167, 0.15);
+    
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #818181; 
+    --text-btn: #1d1f20; 
+    
+    --border-subtle: rgba(68, 68, 68, 0.5);
+    --border-divider: rgba(255, 255, 255, 0.1);
+    --border-focus: rgba(136, 136, 136, 0.6);
+    --shadow-card-1: rgba(0, 0, 0, 0.5);
+    --shadow-card-2: rgba(0, 0, 0, 0.3);
+    --shadow-glow: rgba(0, 0, 0, 0.8);
+    --shadow-btn: rgba(255, 255, 255, 0.1);
+    --shadow-btn-hover: rgba(255, 255, 255, 0.25);
+}
 
 /* ==========================================================================
-    THEME TOGGLE (DARK / LIGHT)
+    BODYS
 ========================================================================== */
 
-    .themeBtnDiv {
-        position: fixed;
-        top: 10px;
-        left: 50px;
-        z-index: 5;
-    }
-
-    .switch {
-        position: absolute;
-        display: inline-block;
-        width: 55px;
-        height: 28px;
-        left: -40px;
-        top: 0;
-        border-radius: 34px;
-        box-shadow:
-            0 0 0 2px rgba(136, 136, 136, 0.2),
-            0 0 10px rgba(88, 173, 242, 0.4),
-            0 0 20px rgba(85, 196, 247, 0.3);
-    }
-    .dark_mode .switch {
-        box-shadow:
-            0 0 0 2px rgba(255, 255, 255, 0.055),
-            0 0 10px rgba(255, 255, 255, 0.123),
-            0 0 20px rgba(255, 255, 255, 0.096);
-    }
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
-    .btnTheme {
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background-color: white;
-        transition: 0.4s;
-        border-radius: 34px;
-    }
-    .btnTheme:before {
-        position: absolute;
-        height: 20px;
-        width: 25px;
-        left: 4px;
-        content: "";
-        bottom: 4px;
-        background-color: #c7d5e6;
-        transition: 0.4s;
-        border-radius: 50%;
-    }
-    .switch input:checked + .btnTheme:before {
-        background-color: #4c505f;
-        transform: translateX(23px);
-    }
-    .switch input:checked + .btnTheme {
-        background-color: #0f1118;
-    }
-    .switch input:focus + .btnTheme {
-        box-shadow: 0 0 1px #000000;
-    }
-    .lightThemeSymbol {
-        position: absolute;
-        width: 14px;
-        top: 7px;
-        left: 10px;
-    }
-    .dark_mode .lightThemeSymbol {
-        filter: brightness(0) saturate(100%)
-            invert(100%) sepia(11%)
-            saturate(507%) hue-rotate(182deg)
-            brightness(62%) contrast(88%);
-    }
-    .darkThemeSymbol {
-        position: absolute;
-        width: 12px;
-        top: 7px;
-        left: 35px;
-        filter: 
-            brightness(0) saturate(100%)
-            invert(50%) sepia(10%)
-            saturate(350%)
-            hue-rotate(180deg)
-            brightness(95%)
-            contrast(90%);
-    }
-    .dark_mode .darkThemeSymbol {
-        filter: invert(100%);
-    }
-
-
-/* ==========================================================================
-    TICKETS
-========================================================================== */
-
-textarea {
-    resize: none;
-    font-family: "Work Sans", sans-serif;
-    scrollbar-color: transparent;
+body {
+    background: radial-gradient(circle, var(--bg-body-start) 0%, var(--bg-body-end) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.4s ease, color 0.4s ease; 
+}
+body.dark_mode {
+    background: radial-gradient(circle, #1a1a1a 0%, #020202 100%);
 }
