@@ -1,0 +1,102 @@
+/* ==========================================================================
+    LOGIN.HTML & FORM CARD
+========================================================================== */
+.loginCard, .formCard {
+    background: var(--bg-surface);
+    padding: 3rem 2.5rem; 
+    border-radius: 20px; 
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 10px 40px var(--shadow-card-1), 0 4px 12px var(--shadow-card-2); 
+    position: relative;
+    overflow: hidden; 
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.loginCard { width: 100%; max-width: 380px; }
+.formCard { width: 50vw; }
+
+.loginCard::before, .formCard::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: linear-gradient(0deg, transparent, transparent 30%, var(--card-hover-glow));
+    transform: rotate(-45deg);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.loginCard:hover, .formCard:hover {
+    box-shadow: 0 15px 50px var(--shadow-glow);
+    transform: translateY(-2px);
+}
+
+.loginCard:hover::before, .formCard:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+}
+
+.loginCard h1, .formCard h1 {
+    margin: 0 0 2.5rem 0;
+    font-size: 1.75rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Work Sans", sans-serif;
+    color: var(--text-primary);
+}
+
+.formGroup { margin-bottom: 1.8rem; }
+
+.loginCard label, .formCard label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: "Work Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.inputForm {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: var(--bg-input);
+    border: 2px solid transparent; 
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: "Work Sans", sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.inputForm:focus {
+    outline: none;
+    background-color: var(--bg-input-focus); 
+    border-color: var(--border-focus);
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, var(--brand-secondary) 0%, var(--brand-primary) 100%);
+    color: var(--text-btn);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s, background 0.4s;
+    font-family: "Work Sans", sans-serif;
+    box-shadow: 0 4px 15px var(--shadow-btn);
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--shadow-btn-hover);
+}
+
+input[type="submit"]:active { transform: translateY(1px); }

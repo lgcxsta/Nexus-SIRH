@@ -1,0 +1,85 @@
+/* ==========================================================================
+    VARIABLES GLOBALES (couleurs)
+========================================================================== */
+:root {
+    /* Boutons, Logos, Dégradés*/
+    --brand-primary: #3c496e;
+    --brand-secondary: #7d90c4;
+    
+    /*ARRIÈRE-PLANS (bkg cartes, menus) */
+    --bg-body-start: #f0f4f8;
+    --bg-body-end: #cce0f5;
+    --bg-surface: #ffffff; /* bkg cartes/formulaires */
+    --bg-sidebar: #f0f7ff; 
+    --bg-input: rgba(205, 230, 255, 0.15);
+    --bg-input-focus: #ffffff;
+    
+    /* Survols, liens actifs */
+    --hover-subtle: rgba(186, 201, 216, 0.15); 
+    --active-subtle: rgba(125, 144, 196, 0.15);
+    --card-hover-glow: rgba(81, 128, 228, 0.15);
+    
+    /* Textes */
+    --text-primary: #1e293b; /* Titres, textes principaux */
+    --text-secondary: #64748b; /* Labels des formulaires */
+    --text-muted: #818181; /* Petit textes */
+    --text-btn: #ffffff; /* Texte sur les boutons */
+    
+    /* BORDURES ET OMBRES */
+    --border-subtle: rgba(204, 219, 240, 0.6);
+    --border-divider: rgba(186, 201, 216, 0.3); /* Ligne de séparation sidebar */
+    --border-focus: rgba(59, 131, 246, 0.4);
+    --shadow-card-1: rgba(51, 65, 85, 0.08);
+    --shadow-card-2: rgba(0, 0, 0, 0.03);
+    --shadow-glow: rgba(169, 208, 245, 0.4);
+    --shadow-btn: rgba(60, 73, 110, 0.2);
+    --shadow-btn-hover: rgba(60, 73, 110, 0.4);
+}
+
+/* DARK THEME */
+body.dark_mode {
+    --brand-primary: #9ba5be;
+    --brand-secondary: #f1f1f1;
+    
+    --bg-body-start: #1a1a1a;
+    --bg-body-end: #020202;
+    --bg-surface: #1a1a1a;
+    --bg-sidebar: #1d1f20;
+    --bg-input: rgba(255, 255, 255, 0.05);
+    --bg-input-focus: #1a1a1a;
+    
+    --hover-subtle: rgba(255, 255, 255, 0.05);
+    --active-subtle: rgba(155, 165, 190, 0.2);
+    --card-hover-glow: rgba(167, 167, 167, 0.15);
+    
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #818181; 
+    --text-btn: #1d1f20; 
+    
+    --border-subtle: rgba(68, 68, 68, 0.5);
+    --border-divider: rgba(255, 255, 255, 0.1);
+    --border-focus: rgba(136, 136, 136, 0.6);
+    --shadow-card-1: rgba(0, 0, 0, 0.5);
+    --shadow-card-2: rgba(0, 0, 0, 0.3);
+    --shadow-glow: rgba(0, 0, 0, 0.8);
+    --shadow-btn: rgba(255, 255, 255, 0.1);
+    --shadow-btn-hover: rgba(255, 255, 255, 0.25);
+}
+
+/* ==========================================================================
+    BODYS
+========================================================================== */
+
+body {
+    background: radial-gradient(circle, var(--bg-body-start) 0%, var(--bg-body-end) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.4s ease, color 0.4s ease; 
+}
+body.dark_mode {
+    background: radial-gradient(circle, #1a1a1a 0%, #020202 100%);
+}
