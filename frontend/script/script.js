@@ -3,6 +3,12 @@
 ========================================================================== */
 function toggleTheme() {
   const isDark = document.body.classList.toggle("dark_mode");
+  if(window.parent && window !== window.parent) {
+    if(isDark) {
+      window.parent.document.body.classList.add("dark_mode")
+    }
+    else {window.parent.document.body.classList.remove("dark_mode")}
+  }
   localStorage.setItem("theme", isDark ? "dark" : "light");
 }
 
