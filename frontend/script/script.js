@@ -19,4 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.remove("dark_mode");
     toggle.checked = false;
   }
+
+  const parentUrl = window.parent.location.href;
+if (parentUrl.includes("mainboard.html")) {
+  document.getElementById("nav-mainboard").classList.add("active");
+} else if (parentUrl.includes("ticket.html")) {
+  document.getElementById("nav-ticket").classList.add("active");
+}
 });

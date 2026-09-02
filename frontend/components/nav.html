@@ -1,6 +1,10 @@
-<script src="../script/script.js"></script>
-<script src="../script/components.js"></script>
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="../script/script.js"></script>
+    <script src="../script/components.js"></script>
+</head>
+<body>
 <nav class="sidebar">
     <div class="sidebarTop">
         <div class="themeBtnDiv" id="btnToggleTheme">
@@ -22,8 +26,10 @@
         <p class="accRole">Rôle: Admin</p>
     </div>
     <ul class="sidebarMenu sidenav">
-        <li class="linkSidebar active"><a href="../pages/mainboard.html">Link 1</a></li>
+        <li class="linkSidebar" id="nav-mainboard"><a href="../pages/mainboard.html" target="_parent">Home</a></li>
         <li class="linkSidebar"><a href="#">Link 2</a></li>
-        <li class="linkSidebar"><a href="../pages/ticket.html">Tickets</a></li>
+        <li class="linkSidebar" id="nav-ticket"><a href="../pages/ticket.html" target="_parent">Tickets</a></li>
     </ul>
 </nav>
+</body>
+</html>
