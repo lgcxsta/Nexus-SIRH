@@ -1,29 +1,43 @@
-<script src="../script/script.js"></script>
-<script src="../script/components.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-<nav class="sidebar">
-    <div class="sidebarTop">
-        <div class="themeBtnDiv" id="btnToggleTheme">
-            <label class="switch">
-                <input type="checkbox" id="themeToggle" onchange="toggleTheme()" />
-                <span class="btnTheme"></span>
-                <img class="lightThemeSymbol" src="../img/sun.png" alt="Light">
-                <img class="darkThemeSymbol" src="../img/moon.png" alt="Dark">
-                <link rel="stylesheet" href="../style/toggleTheme.css">
-                <link rel="stylesheet" href="../style/sidebar.css">
-                <link rel="stylesheet" href="../style/style.css">
-            </label>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/script.js"></script>
+    <script src="../script/components.js"></script>
+</head>
+
+<body>
+    <nav class="sidebar">
+        <div class="sidebarTop">
+            <div class="themeBtnDiv" id="btnToggleTheme">
+                <label class="switch">
+                    <input type="checkbox" id="themeToggle" onchange="toggleTheme()" />
+                    <span class="btnTheme"></span>
+                    <img class="lightThemeSymbol" src="../img/sun.png" alt="Light">
+                    <img class="darkThemeSymbol" src="../img/moon.png" alt="Dark">
+                    <link rel="stylesheet" href="../style/toggleTheme.css">
+                    <link rel="stylesheet" href="../style/sidebar.css">
+                    <link rel="stylesheet" href="../style/style.css">
+                </label>
+            </div>
+            <p class="nameApp">
+                <span class="nexus">Nexus</span>
+                <span class="sirh">SIRH</span>
+            </p>
+            <p class="accName">Compte de: LGO</p>
+            <p class="accRole">Rôle: Admin</p>
         </div>
-        <p class="nameApp">
-            <span class="nexus">Nexus</span>
-            <span class="sirh">SIRH</span>
-        </p>
-        <p class="accName">Compte de: LGO</p>
-        <p class="accRole">Rôle: Admin</p>
-    </div>
-    <ul class="sidebarMenu sidenav">
-        <li class="linkSidebar active"><a href="../pages/mainboard.html">Link 1</a></li>
-        <li class="linkSidebar"><a href="#">Link 2</a></li>
-        <li class="linkSidebar"><a href="../pages/ticket.html">Tickets</a></li>
-    </ul>
-</nav>
+        <ul class="sidebarMenu sidenav">
+            <ul class="sidebarMenu sidenav">
+                <li class="linkSidebar" id="nav-mainboard"><a href="../pages/mainboard.html" target="_parent">Link 1</a>
+                </li>
+                <li class="linkSidebar"><a href="#" target="_parent">Link 2</a></li>
+                <li class="linkSidebar" id="nav-ticket"><a href="../pages/ticket.html" target="_parent">Tickets</a></li>
+            </ul>
+        </ul>
+    </nav>
+</body>
+
+</html>
