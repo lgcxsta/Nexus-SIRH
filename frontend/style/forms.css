@@ -100,3 +100,11 @@ input[type="submit"]:hover {
 }
 
 input[type="submit"]:active { transform: translateY(1px); }
+
+select.inputForm {
+    color: var(--text-secondary);
+}
+
+select.inputForm:valid {
+    color: var(--text-primary);
+}
