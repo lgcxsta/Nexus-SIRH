@@ -2,9 +2,9 @@
 
 return (object)[
     'host' => '127.0.0.1',
-    'port' => '8009',
+    'port' => '3306',
     'dbname' => 'nexus',
     'username' => 'root',
-    'password' => '',
+    'password' => 'VOTRE_MOT_DE_PASSE_ICI',
     'charset' => 'utf8mb4',
 ];

@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../backend/models/login.php';
+require_once __DIR__ . '/../models/login.php';
 
 class LoginController {
     private $loginModel;
@@ -15,7 +15,7 @@ class LoginController {
 
       $user = $this->loginModel->getUserEmail($email);
 
-  if ($user && $password === $user->password) {
+  if ($user && password_verify($password, $user->password)) {
         // Authentification réussie
         jsonResponse([
           'message' => 'Authentication successful',

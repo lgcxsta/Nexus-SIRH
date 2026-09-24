@@ -154,10 +154,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `name`, `lastname`, `email`, `password`, `role_id`, `manager_id`, `company_id`) VALUES
-(1, 'Sophie', 'Durand', 'sophie.admin@nexus.com', 'pass123', 2, NULL, 1),
-(2, 'Marc', 'Leroy', 'marc.it@nexus.com', 'pass123', 3, 1, 1),
-(3, 'Leo', 'Martin', 'leo.apprenti@nexus.com', 'pass123', 1, 2, 1),
-(4, 'Julie', 'Petit', 'julie.it@tech.com', 'pass123', 3, NULL, 1);
+(1, 'Sophie', 'Durand', 'sophie.admin@nexus.com', '$2y$10$zqH8Goez7TB3WT.8QfmsaeImkMWXaBJyx2EjZHlBkPnR3K6Y0soSq', 2, NULL, 1),
+(2, 'Marc', 'Leroy', 'marc.it@nexus.com', '$2y$10$zqH8Goez7TB3WT.8QfmsaeImkMWXaBJyx2EjZHlBkPnR3K6Y0soSq', 3, 1, 1),
+(3, 'Leo', 'Martin', 'leo.apprenti@nexus.com', '$2y$10$zqH8Goez7TB3WT.8QfmsaeImkMWXaBJyx2EjZHlBkPnR3K6Y0soSq', 1, 2, 1),
+(4, 'Julie', 'Petit', 'julie.it@tech.com', '$2y$10$zqH8Goez7TB3WT.8QfmsaeImkMWXaBJyx2EjZHlBkPnR3K6Y0soSq', 3, NULL, 1);
 
 -- --------------------------------------------------------
 
