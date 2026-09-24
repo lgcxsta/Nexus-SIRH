@@ -1,4 +1,4 @@
-<? 
+<?php
 
 return (object)[
     'host' => '127.0.0.1',
