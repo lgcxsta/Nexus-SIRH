@@ -11,13 +11,13 @@
     --bg-body-end: #cce0f5;
     --bg-surface: #ffffff; /* bkg cartes/formulaires */
     --bg-sidebar: #f0f7ff; 
-    --bg-input: rgba(205, 230, 255, 0.15);
+    --bg-input: #cde6ff26;
     --bg-input-focus: #ffffff;
     
     /* Survols, liens actifs */
-    --hover-subtle: rgba(186, 201, 216, 0.15); 
-    --active-subtle: rgba(125, 144, 196, 0.15);
-    --card-hover-glow: rgba(81, 128, 228, 0.15);
+    --hover-subtle: #bac9d826; 
+    --active-subtle: #7d90c426;
+    --card-hover-glow: #5180e426;
     
     /* Textes */
     --text-primary: #1e293b; /* Titres, textes principaux */
@@ -26,14 +26,14 @@
     --text-btn: #ffffff; /* Texte sur les boutons */
     
     /* BORDURES ET OMBRES */
-    --border-subtle: rgba(204, 219, 240, 0.6);
-    --border-divider: rgba(186, 201, 216, 0.3); /* Ligne de séparation sidebar */
-    --border-focus: rgba(59, 131, 246, 0.4);
-    --shadow-card-1: rgba(51, 65, 85, 0.08);
-    --shadow-card-2: rgba(0, 0, 0, 0.03);
-    --shadow-glow: rgba(169, 208, 245, 0.4);
-    --shadow-btn: rgba(60, 73, 110, 0.2);
-    --shadow-btn-hover: rgba(60, 73, 110, 0.4);
+    --border-subtle: #ccdbf099;
+    --border-divider: #bac9d84d; /* Ligne de séparation sidebar */
+    --border-focus: #3b83f666;
+    --shadow-card-1: #33415514;
+    --shadow-card-2: #00000008;
+    --shadow-glow: #a9d0f566;
+    --shadow-btn: #3c496e33;
+    --shadow-btn-hover: #3c496e66;
 }
 
 /* DARK THEME */
