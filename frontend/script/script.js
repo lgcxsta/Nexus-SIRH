@@ -27,10 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
     toggle.checked = false;
   }
 
+  /* ==========================================================================
+    NAVIGATION
+========================================================================== */
+  // Active style on the right eelement on the navigation bar
   const parentUrl = window.parent.location.href;
-  if (parentUrl.includes("mainboard.html")) {
-    document.getElementById("nav-mainboard").classList.add("active");
+  if (parentUrl.includes("dashboard.html")) {
+    document.getElementById("nav-dashboard").classList.add("active");
   } else if (parentUrl.includes("ticket.html")) {
     document.getElementById("nav-ticket").classList.add("active");
+  } else if (parentUrl.includes("presences.html")) {
+    document.getElementById("nav-presence").classList.add("active");
+  } else if (parentUrl.includes("calendrier.html")) {
+    document.getElementById("nav-calendrier").classList.add("active");
   }
 });
